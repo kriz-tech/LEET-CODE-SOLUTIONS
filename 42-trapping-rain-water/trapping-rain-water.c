@@ -5,6 +5,5 @@ int trap(int* h, int n) {
     rmax[n - 1] = h[n - 1];
     for(int i = n - 2; i >= 0; i--) rmax[i] = fmax(rmax[i + 1], h[i]);
     for(int i = 0; i < n; i++) res += fmin(lmax[i],rmax[i]) - h[i];
-
     return res;
 }
