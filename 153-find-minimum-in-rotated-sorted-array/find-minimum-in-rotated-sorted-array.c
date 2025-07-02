@@ -1,5 +1,5 @@
 int findMin(int* nums, int n) {
-    if(n == 1) return nums[0];
+    if(n == 1) return nums[0];// for avoiding heap overflow error
     if(nums[0] < nums[n - 1]) return nums[0];
     int left = 0, right = n - 1;
     while(left <= right)
@@ -11,5 +11,4 @@ int findMin(int* nums, int n) {
         else right = mid - 1;
     }
     return -1;
-    
 }
