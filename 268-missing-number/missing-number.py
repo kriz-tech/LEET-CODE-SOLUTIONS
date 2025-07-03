@@ -4,7 +4,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        for i in range(len(nums)):
-            if i not in nums:
-                return i
-        return len(nums)
+        n = len(nums)
+        total = n * (n + 1) // 2
+        return total - sum(nums)
