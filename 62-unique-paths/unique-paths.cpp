@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int up(int row, int col, int m, int n, vector<vector<int>> &dp)
+    int up(int row, int col, int m, int n, vector<vector<int>> &dp) // ambersand is important.
     {
         if(row == m || col == n) return 0;
         if(row == m - 1 && col == n - 1) return 1;
@@ -12,3 +12,5 @@ public:
         return up(0, 0, m, n, dp);
     }
 };
+//TC : O(m * n)
+//SC : O(m * n)
