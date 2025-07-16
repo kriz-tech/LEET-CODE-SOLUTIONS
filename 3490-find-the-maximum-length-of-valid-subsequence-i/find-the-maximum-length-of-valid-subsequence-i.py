@@ -13,7 +13,7 @@ class Solution(object):
             prev_dp = [row[:] for row in dp]
 
             for j in range(2):
-                y = (j - x - 2) % 2
+                y = (j - x + 2) % 2
                 dp[y][x] = max(dp[y][x], prev_dp[x][y] + 1)
                 res = max(res, dp[y][x])
         return res
