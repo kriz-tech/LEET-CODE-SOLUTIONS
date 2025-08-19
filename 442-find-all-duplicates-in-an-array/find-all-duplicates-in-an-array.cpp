@@ -1,12 +1,12 @@
 class Solution {
 public:
     vector<int> findDuplicates(vector<int>& nums) {
-        unordered_map<int, int>freq;
-        for(auto num : nums) freq[num]++;
-
+        unordered_set<int>seen;
         vector<int>res;
-        for(auto &n : freq){
-            if(n.second > 1) res.push_back(n.first);
+
+        for(auto num : nums){
+            if(seen.count(num)) res.push_back(num);
+            else seen.insert(num);
         }
         return res;
     }
